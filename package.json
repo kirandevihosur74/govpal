@@ -1,0 +1,13 @@
+{
+  "name": "govpal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "web:dev": "pnpm --filter @govpal/web dev",
+    "api:dev": "cd services/api && source venv/bin/activate && uvicorn main:app --reload --port 8000",
+    "dev": "concurrently -k -n WEB,API -c blue,magenta \"pnpm web:dev\" \"pnpm api:dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8"
+  }
+}

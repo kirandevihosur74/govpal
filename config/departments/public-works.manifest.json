@@ -1,0 +1,167 @@
+{
+  "id": "public-works",
+  "name": "Public Works Department",
+  "description": "Infrastructure, utilities, and public facility management",
+  "widgets": [
+    {
+      "id": "SearchResults",
+      "title": "Document Search",
+      "type": "search",
+      "priority": 1,
+      "config": {
+        "defaultFilters": {
+          "dept": "public-works"
+        },
+        "showAggregates": true,
+        "maxResults": 20
+      }
+    },
+    {
+      "id": "Timeline",
+      "title": "Timeline View",
+      "type": "timeline",
+      "priority": 2,
+      "config": {
+        "groupBy": "year",
+        "showProjects": true
+      }
+    },
+    {
+      "id": "Map",
+      "title": "Infrastructure Map",
+      "type": "map",
+      "priority": 3,
+      "config": {
+        "defaultLayer": "infrastructure",
+        "showAssets": true
+      }
+    },
+    {
+      "id": "Analytics",
+      "title": "Department Analytics",
+      "type": "analytics",
+      "priority": 4,
+      "config": {
+        "metrics": ["budget", "projects", "maintenance"]
+      }
+    }
+  ],
+  "roleOverrides": {
+    "clerk": {
+      "widgets": [
+        {
+          "id": "SearchResults",
+          "title": "Document Search",
+          "type": "search",
+          "priority": 1,
+          "config": {
+            "defaultFilters": {
+              "dept": "public-works"
+            },
+            "showAggregates": false,
+            "maxResults": 10
+          }
+        },
+        {
+          "id": "SimpleList",
+          "title": "Recent Documents",
+          "type": "list",
+          "priority": 2,
+          "config": {
+            "sortBy": "date",
+            "limit": 5
+          }
+        }
+      ]
+    },
+    "planner": {
+      "widgets": [
+        {
+          "id": "SearchResults",
+          "title": "Document Search",
+          "type": "search",
+          "priority": 1
+        },
+        {
+          "id": "Timeline",
+          "title": "Project Timeline",
+          "type": "timeline",
+          "priority": 2
+        },
+        {
+          "id": "Map",
+          "title": "Planning Map",
+          "type": "map",
+          "priority": 3,
+          "config": {
+            "defaultLayer": "zoning",
+            "showProposals": true
+          }
+        },
+        {
+          "id": "CodeBrowser",
+          "title": "Code Reference",
+          "type": "code",
+          "priority": 4,
+          "config": {
+            "sections": ["zoning", "building", "environmental"]
+          }
+        }
+      ]
+    }
+  },
+  "intentAddons": {
+    "statute_search": [
+      {
+        "id": "CodeBrowser",
+        "title": "Code Reference",
+        "type": "code",
+        "priority": 1,
+        "config": {
+          "highlightMatches": true
+        }
+      }
+    ],
+    "compare_documents": [
+      {
+        "id": "Diff",
+        "title": "Document Comparison",
+        "type": "diff",
+        "priority": 1,
+        "config": {
+          "showLineNumbers": true,
+          "highlightChanges": true
+        }
+      }
+    ],
+    "address_lookup": [
+      {
+        "id": "AddressDetails",
+        "title": "Property Information",
+        "type": "address",
+        "priority": 1,
+        "config": {
+          "showHistory": true,
+          "showPermits": true
+        }
+      }
+    ]
+  },
+  "policy": {
+    "clerk": {
+      "maxWidgets": 2,
+      "allowedTypes": ["search", "list"],
+      "dataAccess": ["public", "internal"]
+    },
+    "planner": {
+      "maxWidgets": 4,
+      "allowedTypes": ["search", "timeline", "map", "code"],
+      "dataAccess": ["public", "internal", "planning"]
+    },
+    "supervisor": {
+      "maxWidgets": 6,
+      "allowedTypes": ["search", "timeline", "map", "code", "analytics", "diff"],
+      "dataAccess": ["public", "internal", "planning", "sensitive"]
+    }
+  }
+}

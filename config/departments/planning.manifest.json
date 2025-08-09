@@ -1,0 +1,97 @@
+{
+  "id": "planning",
+  "name": "Planning Department",
+  "description": "Urban planning, zoning, and development oversight",
+  "widgets": [
+    {
+      "id": "SearchResults",
+      "title": "Document Search",
+      "type": "search",
+      "priority": 1,
+      "config": {
+        "defaultFilters": {
+          "dept": "planning"
+        },
+        "showAggregates": true,
+        "maxResults": 15
+      }
+    },
+    {
+      "id": "Map",
+      "title": "Zoning Map",
+      "type": "map",
+      "priority": 2,
+      "config": {
+        "defaultLayer": "zoning",
+        "showProposals": true,
+        "showParcels": true
+      }
+    },
+    {
+      "id": "CodeBrowser",
+      "title": "Zoning Code",
+      "type": "code",
+      "priority": 3,
+      "config": {
+        "sections": ["zoning", "subdivision", "design"]
+      }
+    },
+    {
+      "id": "ApplicationTracker",
+      "title": "Application Status",
+      "type": "tracker",
+      "priority": 4,
+      "config": {
+        "showTimeline": true,
+        "groupBy": "status"
+      }
+    }
+  ],
+  "roleOverrides": {
+    "clerk": {
+      "widgets": [
+        {
+          "id": "SearchResults",
+          "title": "Document Search",
+          "type": "search",
+          "priority": 1
+        },
+        {
+          "id": "ApplicationTracker",
+          "title": "Applications",
+          "type": "tracker",
+          "priority": 2,
+          "config": {
+            "readOnly": true
+          }
+        }
+      ]
+    }
+  },
+  "intentAddons": {
+    "zoning_inquiry": [
+      {
+        "id": "ZoningDetails",
+        "title": "Zoning Information",
+        "type": "zoning",
+        "priority": 1,
+        "config": {
+          "showRestrictions": true,
+          "showHistory": true
+        }
+      }
+    ]
+  },
+  "policy": {
+    "clerk": {
+      "maxWidgets": 2,
+      "allowedTypes": ["search", "tracker"],
+      "dataAccess": ["public", "applications"]
+    },
+    "planner": {
+      "maxWidgets": 4,
+      "allowedTypes": ["search", "map", "code", "tracker", "zoning"],
+      "dataAccess": ["public", "applications", "internal"]
+    }
+  }
+}
