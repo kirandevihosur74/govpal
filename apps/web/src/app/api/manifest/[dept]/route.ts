@@ -167,7 +167,7 @@ function getDepartmentManifest(dept: string) {
       theme: {
         primary: "#7C3AED",
         secondary: "#8B5CF6",
-        icon: "🏗️"
+        icon: "P"
       }
     },
     

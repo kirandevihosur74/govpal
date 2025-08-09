@@ -1,0 +1,11 @@
+BUILDING PERMIT APPLICATION
+Application Number: BP-2024-1234
+Property Address: 123 Main Street, San Francisco, CA 94102
+Applicant: John Developer
+Project Description: Single family residence renovation
+Permit Type: Building Permit
+Application Date: 2024-01-15
+Estimated Cost: $150,000
+Contractor: ABC Construction Company
+Contact: john@developer.com
+Status: Under Review

@@ -2,19 +2,19 @@
 
 A cutting-edge government platform showcasing **MorphLLM-powered dynamic UI generation** with **Freestyle code execution**. Experience how AI can dynamically modify government interfaces based on user roles, departments, and real-time needs.
 
-## 🌟 Key Features
+## Key Features
 
 ### 🧠 MorphLLM Integration
 - **AI-Powered UI Generation**: Natural language prompts generate functional UI components
 - **Real-time Code Execution**: Generated code runs instantly via Freestyle serverless platform
 - **Context-Aware**: AI understands department context, user roles, and current interface state
 
-### 🎭 Dynamic Role-Based UI
+### Dynamic Role-Based UI
 - **Adaptive Layouts**: Interface transforms based on user role (Planner, Clerk, Supervisor)
 - **Manifest-Driven Architecture**: JSON manifests define department-specific widget configurations
 - **Smart Permission System**: Widgets automatically hide/show based on role permissions
 
-### 🏛️ Department-Specific Interfaces
+### Department-Specific Interfaces
 - **Public Works**: Infrastructure maps, project timelines, work order management
 - **Planning**: Zoning maps, permit applications, code browser
 - **Finance**: Budget dashboards, approval workflows, financial analytics
@@ -31,7 +31,7 @@ A cutting-edge government platform showcasing **MorphLLM-powered dynamic UI gene
 - **Backend**: Node.js API routes
 - **Architecture**: Manifest-driven, serverless-first
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 20 (see `.nvmrc`)
@@ -68,7 +68,7 @@ A cutting-edge government platform showcasing **MorphLLM-powered dynamic UI gene
    - Try prompt: "Show permit status dashboard"
    - Try prompt: "Create analytics chart for response times"
 
-## 🏗️ Architecture
+## Architecture
 
 ### Manifest-Driven UI
 ```typescript
@@ -91,7 +91,7 @@ interface DepartmentManifest {
 - `POST /api/execute` - Execute generated code via Freestyle
 - `GET /api/manifest/[dept]` - Load department configuration
 
-## 🎯 Future Roadmap
+## Future Roadmap
 
 - **Real MorphLLM Integration**: Connect to actual MorphLLM service
 - **Freestyle Production Setup**: Full Freestyle API integration

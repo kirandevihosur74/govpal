@@ -1,0 +1,11 @@
+INSURANCE CERTIFICATE
+Policy Number: INS-2022-4567
+Insured: City Contractor ABC
+Insurance Company: State Insurance Co.
+Coverage Type: General Liability
+Coverage Amount: $2,000,000
+Effective Date: 2022-01-01
+Expiration Date: 2022-12-31
+Additional Insured: City and County of San Francisco
+Certificate Holder: Department of Public Works
+STATUS: EXPIRED - REQUIRES RENEWAL

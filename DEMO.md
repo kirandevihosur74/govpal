@@ -1,6 +1,6 @@
 # GovPal Demo Script - Just-in-Time UI Adaptation
 
-## 🎬 Live Demo Walkthrough (5 minutes)
+## Live Demo Walkthrough (5 minutes)
 
 ### 1. **Opening Hook** (30s)
 "Welcome to GovPal - where AI doesn't just respond to prompts, it watches how you work and adapts the interface automatically. No buttons to press, no prompts needed - just pure intelligent adaptation."
@@ -10,7 +10,7 @@
    - Type in search: "123 Main Street permits"
    - Then: "456 Oak Avenue zoning"
    - "Watch this - the AI detected address patterns and auto-injected a map widget!"
-   - Point out purple border and "🤖 AI Added" badge
+   - Point out purple border and "AI Added" badge
 
 2. **Legal Reference Trigger**:
    - Type: "section 15.2 zoning code"
@@ -50,7 +50,7 @@
 
 ---
 
-## 🎯 Key Demo Points
+## Key Demo Points
 
 ### Role Switching Impact:
 - **Planner → Clerk**: Map disappears (security/simplicity)
@@ -65,7 +65,7 @@
 
 ### Visual Cues to Highlight:
 - Theme colors changing (green → purple → red)
-- Icon changes (🚧 → 🏗️ → 💰)
+- Icon changes (PW → P → F)
 - Widget count badges updating
 - Generated code appearing in real-time
 - Execution results showing immediately
@@ -108,7 +108,7 @@ const response = await fetch('/api/morph', {
 
 ---
 
-## 🎪 Backup Demo Ideas
+## Backup Demo Ideas
 
 If technical issues arise:
 
